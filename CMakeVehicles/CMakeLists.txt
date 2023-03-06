@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22)
+project(Vehicle)
+add_library(VehiclesLibraryDynamic SHARED DynamicVehicles.h DynamicVehicles.cpp GraundTransport.h GraundTransport.cpp Camel.h Camel.cpp "CamelSpeedWalker.cpp" "Centaur.h" "Centaur.cpp" "BootsAllTerrains.h" "BootsAllTerrains.cpp")
+add_executable(Vehicle main.cpp Camel.cpp "CamelSpeedWalker.cpp" "Centaur.h" "Centaur.cpp" "BootsAllTerrains.h" "BootsAllTerrains.cpp")
+target_link_libraries(Vehicle VehiclesLibraryDynamic)
