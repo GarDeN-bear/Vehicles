@@ -1,8 +1,8 @@
 #pragma once
-#include "DynamicVehicles.h"
+#include "../DynamicVehicles/DynamicVehicles.h"
 
 namespace DynamicVehicles {
-	class GraundTransport : public DynamicVehicles::Vehicles {
+	class GraundVehicles : public Vehicles {
 	protected:
 		int timeBeforeRest;
 		int restPeriod_1;

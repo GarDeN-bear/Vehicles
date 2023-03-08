@@ -1,14 +1,17 @@
 #include "Camel.h"
 
 namespace DynamicVehicles {
-	Camel::Camel() {
+	Camel::Camel(int distance_) {
+		nameVehicle = "Верблюд";
 		velocity = 10;
 		timeBeforeRest = 30;
 		restPeriod_1 = 5;
 		restPeriod_2 = 8;
+		distance = distance_;
+		resultTime = calculateTime();
 	}
 
-	int Camel::Calculate(int distance) {
+	int Camel::calculateTime() {
 		int timeWithoutRest = distance / velocity;
 		int timeWithRest = timeWithoutRest / timeBeforeRest;
 		if (timeWithRest == 0) {
@@ -21,4 +24,5 @@ namespace DynamicVehicles {
 			return timeWithoutRest + restPeriod_1 + (timeWithRest - 1) * restPeriod_2;
 		}
 	}
+
 }
