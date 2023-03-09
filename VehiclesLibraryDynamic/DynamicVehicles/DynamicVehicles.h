@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#ifdef VehiclesLibraryDynamic_EXPORTS
+#ifdef VEHICLESLIBRARYDYNAMIC_EXPORTS
 #define VEHICLESLIBRARY_API __declspec(dllexport)
 #else 
 #define VEHICLESLIBRARY_API __declspec(dllimport)

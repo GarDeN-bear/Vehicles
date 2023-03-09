@@ -18,19 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Camel.h" />
-    <ClInclude Include="DynamicVehicles.h" />
-    <ClInclude Include="GraundTransport.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="DynamicVehicles.cpp" />
-    <ClCompile Include="GraundTransport.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e240ee64-bc02-4c98-a546-81aee422176f}</ProjectGuid>
+    <ProjectGuid>{df02f4df-5473-42b8-8da0-5d494aada5b0}</ProjectGuid>
     <RootNamespace>VehiclesLibraryDynamic</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -85,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -100,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -115,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,6 +124,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -139,6 +134,32 @@
       <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AirVehicles\AirVehicles.cpp" />
+    <ClCompile Include="AirVehicles\Broom.cpp" />
+    <ClCompile Include="AirVehicles\CarpetPlane.cpp" />
+    <ClCompile Include="AirVehicles\Eagle.cpp" />
+    <ClCompile Include="DynamicVehicles\DynamicVehicles.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="GraundVehicles\BootsAllTerrains.cpp" />
+    <ClCompile Include="GraundVehicles\Camel.cpp" />
+    <ClCompile Include="GraundVehicles\CamelSpeedWalker.cpp" />
+    <ClCompile Include="GraundVehicles\Centaur.cpp" />
+    <ClCompile Include="GraundVehicles\GraundVehicles.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AirVehicles\AirVehicles.h" />
+    <ClInclude Include="AirVehicles\Broom.h" />
+    <ClInclude Include="AirVehicles\CarpetPlane.h" />
+    <ClInclude Include="AirVehicles\Eagle.h" />
+    <ClInclude Include="DynamicVehicles\DynamicVehicles.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="GraundVehicles\BootsAllTerrains.h" />
+    <ClInclude Include="GraundVehicles\Camel.h" />
+    <ClInclude Include="GraundVehicles\CamelSpeedWalker.h" />
+    <ClInclude Include="GraundVehicles\Centaur.h" />
+    <ClInclude Include="GraundVehicles\GraundVehicles.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

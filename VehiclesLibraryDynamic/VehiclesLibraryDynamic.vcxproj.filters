@@ -13,24 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="AirVehicles">
+      <UniqueIdentifier>{a420d829-39ba-4f1f-a4b4-2acdb05a6c02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraundVehicles">
+      <UniqueIdentifier>{28e56633-e9b2-4d26-bd2c-f70a289d5127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DynamicVehicles">
+      <UniqueIdentifier>{fdce4ea2-a0bc-4fd3-9b3b-4d0901bfa10b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DynamicVehicles.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GraundTransport.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Camel.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
+    <ClCompile Include="AirVehicles\AirVehicles.cpp">
+      <Filter>AirVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="AirVehicles\Broom.cpp">
+      <Filter>AirVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="AirVehicles\CarpetPlane.cpp">
+      <Filter>AirVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="AirVehicles\Eagle.cpp">
+      <Filter>AirVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="GraundVehicles\BootsAllTerrains.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="GraundVehicles\Camel.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="GraundVehicles\CamelSpeedWalker.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="GraundVehicles\Centaur.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="GraundVehicles\GraundVehicles.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicVehicles\DynamicVehicles.cpp">
+      <Filter>DynamicVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DynamicVehicles.cpp">
+    <ClInclude Include="AirVehicles\AirVehicles.h">
+      <Filter>AirVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="AirVehicles\Broom.h">
+      <Filter>AirVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="AirVehicles\CarpetPlane.h">
+      <Filter>AirVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="AirVehicles\Eagle.h">
+      <Filter>AirVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="GraundVehicles\BootsAllTerrains.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="GraundVehicles\Camel.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="GraundVehicles\CamelSpeedWalker.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="GraundVehicles\Centaur.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="GraundVehicles\GraundVehicles.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicVehicles\DynamicVehicles.h">
+      <Filter>DynamicVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
       <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="GraundTransport.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>
