@@ -4,6 +4,6 @@
 namespace DynamicVehicles {
 	class Eagle : public AirVehicles {
 	public:
-		Eagle(int distance_);
+		Eagle(float distance_);
 	};
 }

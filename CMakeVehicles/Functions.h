@@ -10,30 +10,34 @@
 #include "AirVehicles/Eagle.h"
 
 
-// функция выбоа типа гонки
+// Функция выбора типа гонки
 void chooseTypeRace(int& racingType);
 
-// функция выбора действия (1. зарегистрировать трансорт)
-void chooseAction(int& action, int& racingType);
+// Функция выбора действия (1. зарегистрировать трансорт)
+void chooseAction(int& action);
 
-// функция выбора действия (1. зарегистрировать трансорт, 2. начать гонку)
-void chooseAction(int step, int& action, int& racingType);
+// Функция выбора действия (1. зарегистрировать трансорт, 2. начать гонку)
+void chooseAction(int step, int& action);
 
-// функция выбора длины дистанции
-void chooseDistance(int& distance);
+// Функция выбора длины дистанции
+void chooseDistance(float& distance);
 
-void showRegisteredVehicles(int racingType, int distance, std::string registeredVehicles);
+// Функция ввывода зарегистрированных транспортных средств
+void showRegisteredVehicles(int racingType, float distance, std::string registeredVehicles);
 
-// функция выбора номера транспортного средства для регистрации в гонке
+// Функция выбора номера транспортного средства для регистрации в гонке
 int getNumberVehicle(int racingType, int& numberVehicle);
 
-// функция выбора транспортного средства в зависимости от введеного номера транспортного средства
-DynamicVehicles::Vehicles chooseVehicle(int step, int numberVehicle, std::string& registeredVehicles, DynamicVehicles::Vehicles* vehicles, int& i, int distance);
+// Функция выбора транспортного средства в зависимости от введеного номера транспортного средства
+DynamicVehicles::Vehicles chooseVehicle(int step, int numberVehicle, std::string& registeredVehicles, DynamicVehicles::Vehicles* vehiclesArray, int& i, float distance);
 
-// исключение, бросаемое при вводе значения длины дистанции меньше 0
-class DistanceBelowZero : public std::runtime_error {
-public:
-	DistanceBelowZero(std::string error) : std::runtime_error(error) {}
-};
-
+// Функция регистрации транспортного средства
+void registerVehicle(int racingType, int step, int& numberVehicle, std::string& registeredVehicles, DynamicVehicles::Vehicles* vehiclesArray, int& i, float distance);
+// Функция проверки повторной регистрации транспорта 
 int checkVehiclesArray(DynamicVehicles::Vehicles vehicle, DynamicVehicles::Vehicles* vehiclesArray, int& i, std::string& registeredVehicles, int size = 7);
+
+// Функция расчёта результата гонки
+void resultRacing(int i, int& action, DynamicVehicles::Vehicles* vehiclesArray);
+
+// Функция сортировки массива транспортных средств
+void sortVehiclesArray(int i, DynamicVehicles::Vehicles* vehiclesArray);

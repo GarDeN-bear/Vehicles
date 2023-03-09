@@ -1,7 +1,7 @@
 #include "CamelSpeedWalker.h"
 
 namespace DynamicVehicles {
-	CamelSpeedWalker::CamelSpeedWalker(int distance_) {
+	CamelSpeedWalker::CamelSpeedWalker(float distance_) {
 		nameVehicle = "Верблюд-быстроход";
 		velocity = 40;
 		timeBeforeRest = 10;
@@ -12,9 +12,9 @@ namespace DynamicVehicles {
 		resultTime = calculateTime();
 	}
 
-	int CamelSpeedWalker::calculateTime() {
-		int timeWithoutRest = distance / velocity;
-		int timeWithRest = timeWithoutRest / timeBeforeRest;
+	float CamelSpeedWalker::calculateTime() {
+		float timeWithoutRest = distance / velocity;
+		float timeWithRest = timeWithoutRest / timeBeforeRest;
 		if (timeWithRest == 0) {
 			return timeWithoutRest;
 		}

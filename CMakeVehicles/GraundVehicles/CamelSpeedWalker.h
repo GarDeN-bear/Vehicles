@@ -4,7 +4,7 @@
 namespace DynamicVehicles {
 	class CamelSpeedWalker : public GraundVehicles {
 	public:
-		CamelSpeedWalker(int distance_);
-		VEHICLESLIBRARY_API int calculateTime() override;
+		CamelSpeedWalker(float distance_);
+		VEHICLESLIBRARY_API float calculateTime() override;
 	};
 }

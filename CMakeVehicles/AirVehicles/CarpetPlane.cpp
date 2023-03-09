@@ -1,7 +1,7 @@
 #include "CarpetPlane.h"
 
 namespace DynamicVehicles {
-	CarpetPlane::CarpetPlane(int distance_) {
+	CarpetPlane::CarpetPlane(float distance_) {
 		nameVehicle = "Ковёр-самолёт";
 		velocity = 10;
 		if (distance_ < 1000) {

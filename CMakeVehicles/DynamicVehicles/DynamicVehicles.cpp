@@ -1,7 +1,7 @@
 #include "DynamicVehicles.h"
 
 namespace DynamicVehicles {
-	int Vehicles::calculateTime() {
+	float Vehicles::calculateTime() {
 		return distance / velocity;
 	}
 
@@ -22,10 +22,10 @@ namespace DynamicVehicles {
 	std::string Vehicles::getVehicleName() {
 		return nameVehicle;
 	}
-	int Vehicles::getVelocity() {
+	float Vehicles::getVelocity() {
 		return velocity;
 	}
-	int Vehicles::getResultTime() {
+	float Vehicles::getResultTime() {
 		return resultTime;
 	}
 }

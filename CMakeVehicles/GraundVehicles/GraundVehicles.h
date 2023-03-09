@@ -2,11 +2,12 @@
 #include "../DynamicVehicles/DynamicVehicles.h"
 
 namespace DynamicVehicles {
+	// Абстрактный родительский класс наземных транспортных средств
 	class GraundVehicles : public Vehicles {
 	protected:
-		int timeBeforeRest;
-		int restPeriod_1;
-		int restPeriod_2;
-		int restPeriod_3;
+		float timeBeforeRest; // Время до отдыха
+		float restPeriod_1; // Время отдыха 1
+		float restPeriod_2; // Время отдыха 2
+		float restPeriod_3; // Время отдыха 3
 	};
 }

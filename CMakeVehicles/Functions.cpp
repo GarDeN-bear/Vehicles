@@ -1,4 +1,6 @@
 #include "Functions.h"
+#include <limits>
+
 
 void chooseTypeRace(int& racingType) {
 	bool flag;
@@ -8,21 +10,26 @@ void chooseTypeRace(int& racingType) {
 		std::cout << "3. Гонка для наземного и воздушного транспорта\n";
 		std::cout << "Виберите тип гонки: ";
 		std::cin >> racingType;
+		// удаление '\n' чтобы не возникало бесконечного цикла
+		std::cin.clear(); // на случай, если предыдущий ввод завершился с ошибкой
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		flag = racingType != 1 && racingType != 2 && racingType != 3;
 		if (flag) {
 			std::cout << "Необходимо ввести значение из списка!\n";
 		}
 	} while (flag);
-
 }
 
-void chooseAction(int& action, int& racingType) {
+void chooseAction(int& action) {
 	bool flag;
 	do {
 		std::cout << "Должно быть зарегистрировано хотя бы 2 транспортных средства\n";
 		std::cout << "1. Зарегистрировать транспорт\n";
 		std::cout << "Выберите действие: ";
 		std::cin >> action;
+		// удаление '\n' чтобы не возникало бесконечного цикла
+		std::cin.clear(); // на случай, если предыдущий ввод завершился с ошибкой
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		flag = action != 1;
 		if (flag) {
 			std::cout << "Необходимо ввести значение из списка!\n";
@@ -30,13 +37,16 @@ void chooseAction(int& action, int& racingType) {
 	} while (flag);
 }
 
-void chooseAction(int step, int& action, int& racingType) {
+void chooseAction(int step, int& action) {
 	bool flag;
 	do {
 		std::cout << "1. Зарегистрировать транспорт\n";
 		std::cout << "2. Начать гонку\n";
 		std::cout << "Выберите действие: ";
 		std::cin >> action;
+		// удаление '\n' чтобы не возникало бесконечного цикла
+		std::cin.clear(); // на случай, если предыдущий ввод завершился с ошибкой
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		flag = action != 1 && action != 2;
 		if (flag) {
 			std::cout << "Необходимо ввести значение из списка!\n";
@@ -44,7 +54,7 @@ void chooseAction(int step, int& action, int& racingType) {
 	} while (flag);
 }
 
-void chooseDistance(int& distance) {
+void chooseDistance(float& distance) {
 	bool flag;
 	do {
 		std::cout << "Укажите длину дистанции (должна быть положительна): ";
@@ -56,9 +66,21 @@ void chooseDistance(int& distance) {
 	} while (flag);
 }
 
-void showRegisteredVehicles(int racingType, int distance, std::string registeredVehicles) {
+void showRegisteredVehicles(int racingType, float distance, std::string registeredVehicles) {
 	if (racingType == 1) {
 		std::cout << "Гонка для наземного транспорта. Расстояние: " << distance << "\n";
+		if (registeredVehicles.length() != 0) {
+			std::cout << "Зарегистрированные транспортные средства: " + registeredVehicles + "\n";
+		}
+	}
+	else if (racingType == 2) {
+		std::cout << "Гонка для воздушного транспорта. Расстояние: " << distance << "\n";
+		if (registeredVehicles.length() != 0) {
+			std::cout << "Зарегистрированные транспортные средства: " + registeredVehicles + "\n";
+		}
+	}
+	else {
+		std::cout << "Гонка для наземного и воздушного транспорта. Расстояние: " << distance << "\n";
 		if (registeredVehicles.length() != 0) {
 			std::cout << "Зарегистрированные транспортные средства: " + registeredVehicles + "\n";
 		}
@@ -78,6 +100,9 @@ int getNumberVehicle(int racingType, int& numberVehicle) {
 		std::cout << "0. Закончить регистрацию\n";
 		std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 		std::cin >> numberVehicle;
+		// удаление '\n' чтобы не возникало бесконечного цикла
+		std::cin.clear(); // на случай, если предыдущий ввод завершился с ошибкой
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		flag = numberVehicle != 0 && numberVehicle != 1 && numberVehicle != 2 && numberVehicle != 3 && numberVehicle != 4 && numberVehicle != 5 && numberVehicle != 6 && numberVehicle != 7;
 		if (flag) {
 			std::cout << "Необходимо ввести значение из списка!\n";
@@ -94,7 +119,7 @@ int getNumberVehicle(int racingType, int& numberVehicle) {
 	return 0;
 }
 
-DynamicVehicles::Vehicles chooseVehicle(int step, int numberVehicle, std::string& registeredVehicles, DynamicVehicles::Vehicles* vehiclesArray, int& i, int distance) {
+DynamicVehicles::Vehicles chooseVehicle(int step, int numberVehicle, std::string& registeredVehicles, DynamicVehicles::Vehicles* vehiclesArray, int& i, float distance) {
 	DynamicVehicles::Vehicles* ptr_vehicle;
 	if (numberVehicle == 1) {
 		DynamicVehicles::BootsAllTerrains bootsAllTerrains(distance);
@@ -160,6 +185,13 @@ DynamicVehicles::Vehicles chooseVehicle(int step, int numberVehicle, std::string
 	return *ptr_vehicle;
 }
 
+void registerVehicle(int racingType, int step, int& numberVehicle, std::string& registeredVehicles, DynamicVehicles::Vehicles* vehiclesArray, int& i, float distance) {
+	showRegisteredVehicles(racingType, distance, registeredVehicles);
+	int checkRacingType = getNumberVehicle(racingType, numberVehicle); // Проверка типа вводимого транспортного средства
+	if (checkRacingType == 0 && numberVehicle != 0) {
+		chooseVehicle(step, numberVehicle, registeredVehicles, vehiclesArray, i, distance);
+	}
+}
 int checkVehiclesArray(DynamicVehicles::Vehicles vehicle, DynamicVehicles::Vehicles* vehiclesArray, int& i, std::string& registeredVehicles, int size) {
 	int check = 0;
 	for (int i = 0; i < size; i++) {
@@ -178,4 +210,40 @@ int checkVehiclesArray(DynamicVehicles::Vehicles vehicle, DynamicVehicles::Vehic
 		i++;
 	}
 	return check;
+}
+
+void resultRacing(int i, int& action, DynamicVehicles::Vehicles* vehiclesArray) {
+	bool flag;
+	do {
+		std::cout << "Результаты гонки:\n";
+		sortVehiclesArray(i, vehiclesArray);
+		std::cout << "\n";
+		std::cout << "1. Провести ещё одну гонку\n";
+		std::cout << "2. Выйти\n";
+		std::cout << "Выберите действие: ";
+		std::cin >> action;
+		// удаление '\n' чтобы не возникало бесконечного цикла
+		std::cin.clear(); // на случай, если предыдущий ввод завершился с ошибкой
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		flag = action != 1 && action != 2;
+		if (flag) {
+			std::cout << "Необходимо ввести значение из списка!\n";
+		}
+	} while (flag);
+}
+
+void sortVehiclesArray(int i, DynamicVehicles::Vehicles* vehiclesArray) {
+	int lengthVehiclesArray = i;
+	DynamicVehicles::Vehicles buf;
+	for (int i = 0; i < lengthVehiclesArray; i++) {
+		for (int j = 0; j < lengthVehiclesArray; j++) {
+			if (vehiclesArray[i].getResultTime() < vehiclesArray[j].getResultTime()) {
+				buf = vehiclesArray[j];
+				vehiclesArray[j] = vehiclesArray[i];
+				vehiclesArray[i] = buf;
+			}
+		}
+	}
+	for (int i = 0; i < lengthVehiclesArray; i++)
+		std::cout << i + 1 << ". " << vehiclesArray[i].getVehicleName() + ". Время: " << vehiclesArray[i].getResultTime() << "\n";
 }

@@ -1,7 +1,7 @@
 #include "BootsAllTerrains.h"
 
 namespace DynamicVehicles {
-	BootsAllTerrains::BootsAllTerrains(int distance_) {
+	BootsAllTerrains::BootsAllTerrains(float distance_) {
 		nameVehicle = "Ботинки-вездеходы";
 		velocity = 6;
 		timeBeforeRest = 60;
@@ -10,7 +10,7 @@ namespace DynamicVehicles {
 		distance = distance_;
 		resultTime = calculateTime();
 	}
-	int BootsAllTerrains::calculateTime() {
+	float BootsAllTerrains::calculateTime() {
 		int timeWithoutRest = distance / velocity;
 		int timeWithRest = timeWithoutRest / timeBeforeRest;
 		if (timeWithRest == 0) {

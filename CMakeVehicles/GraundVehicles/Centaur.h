@@ -4,7 +4,7 @@
 namespace DynamicVehicles {
 	class Centaur : public GraundVehicles {
 	public:
-		Centaur(int distance_);
-		VEHICLESLIBRARY_API int calculateTime() override;
+		Centaur(float distance_);
+		VEHICLESLIBRARY_API float calculateTime() override;
 	};
 }

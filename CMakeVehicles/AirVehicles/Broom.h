@@ -4,6 +4,6 @@
 namespace DynamicVehicles {
 	class Broom : public AirVehicles {
 	public:
-		Broom(int distance_);
+		Broom(float distance_);
 	};
 }

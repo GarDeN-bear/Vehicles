@@ -4,7 +4,7 @@
 namespace DynamicVehicles {
 	class BootsAllTerrains : public GraundVehicles {
 	public:
-		BootsAllTerrains(int distance_);
-		VEHICLESLIBRARY_API int calculateTime() override;
+		BootsAllTerrains(float distance_);
+		VEHICLESLIBRARY_API float calculateTime() override;
 	};
 }

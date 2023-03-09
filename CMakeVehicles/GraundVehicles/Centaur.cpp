@@ -1,7 +1,7 @@
 #include "Centaur.h"
 
 namespace DynamicVehicles {
-	Centaur::Centaur(int distance_) {
+	Centaur::Centaur(float distance_) {
 		nameVehicle = "Кентавр";
 		velocity = 15;
 		timeBeforeRest = 8;
@@ -9,9 +9,9 @@ namespace DynamicVehicles {
 		distance = distance_;
 		resultTime = calculateTime();
 	}
-	int Centaur::calculateTime() {
-		int timeWithoutRest = distance / velocity;
-		int timeWithRest = timeWithoutRest / timeBeforeRest;
+	float Centaur::calculateTime() {
+		float timeWithoutRest = distance / velocity;
+		float timeWithRest = timeWithoutRest / timeBeforeRest;
 		if (timeWithRest == 0) {
 			return timeWithoutRest;
 		}

@@ -4,6 +4,6 @@
 namespace DynamicVehicles {
 	class CarpetPlane : public AirVehicles {
 	public:
-		CarpetPlane(int distance_);
+		CarpetPlane(float distance_);
 	};
 }
