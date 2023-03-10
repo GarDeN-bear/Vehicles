@@ -24,72 +24,72 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AirVehicles\AirVehicles.cpp">
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\AirVehicles.cpp">
       <Filter>AirVehicles</Filter>
     </ClCompile>
-    <ClCompile Include="AirVehicles\Broom.cpp">
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\Broom.cpp">
       <Filter>AirVehicles</Filter>
     </ClCompile>
-    <ClCompile Include="AirVehicles\CarpetPlane.cpp">
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\CarpetPlane.cpp">
       <Filter>AirVehicles</Filter>
     </ClCompile>
-    <ClCompile Include="AirVehicles\Eagle.cpp">
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\Eagle.cpp">
       <Filter>AirVehicles</Filter>
     </ClCompile>
-    <ClCompile Include="GraundVehicles\BootsAllTerrains.cpp">
-      <Filter>GraundVehicles</Filter>
-    </ClCompile>
-    <ClCompile Include="GraundVehicles\Camel.cpp">
-      <Filter>GraundVehicles</Filter>
-    </ClCompile>
-    <ClCompile Include="GraundVehicles\CamelSpeedWalker.cpp">
-      <Filter>GraundVehicles</Filter>
-    </ClCompile>
-    <ClCompile Include="GraundVehicles\Centaur.cpp">
-      <Filter>GraundVehicles</Filter>
-    </ClCompile>
-    <ClCompile Include="GraundVehicles\GraundVehicles.cpp">
-      <Filter>GraundVehicles</Filter>
-    </ClCompile>
-    <ClCompile Include="DynamicVehicles\DynamicVehicles.cpp">
+    <ClCompile Include="..\CMakeVehicles\DynamicVehicles\DynamicVehicles.cpp">
       <Filter>DynamicVehicles</Filter>
     </ClCompile>
-    <ClCompile Include="Functions.cpp">
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\BootsAllTerrains.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\Camel.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\CamelSpeedWalker.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\Centaur.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\GraundVehicles.cpp">
+      <Filter>GraundVehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CMakeVehicles\Functions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AirVehicles\AirVehicles.h">
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\AirVehicles.h">
       <Filter>AirVehicles</Filter>
     </ClInclude>
-    <ClInclude Include="AirVehicles\Broom.h">
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\Broom.h">
       <Filter>AirVehicles</Filter>
     </ClInclude>
-    <ClInclude Include="AirVehicles\CarpetPlane.h">
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\CarpetPlane.h">
       <Filter>AirVehicles</Filter>
     </ClInclude>
-    <ClInclude Include="AirVehicles\Eagle.h">
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\Eagle.h">
       <Filter>AirVehicles</Filter>
     </ClInclude>
-    <ClInclude Include="GraundVehicles\BootsAllTerrains.h">
-      <Filter>GraundVehicles</Filter>
-    </ClInclude>
-    <ClInclude Include="GraundVehicles\Camel.h">
-      <Filter>GraundVehicles</Filter>
-    </ClInclude>
-    <ClInclude Include="GraundVehicles\CamelSpeedWalker.h">
-      <Filter>GraundVehicles</Filter>
-    </ClInclude>
-    <ClInclude Include="GraundVehicles\Centaur.h">
-      <Filter>GraundVehicles</Filter>
-    </ClInclude>
-    <ClInclude Include="GraundVehicles\GraundVehicles.h">
-      <Filter>GraundVehicles</Filter>
-    </ClInclude>
-    <ClInclude Include="DynamicVehicles\DynamicVehicles.h">
+    <ClInclude Include="..\CMakeVehicles\DynamicVehicles\DynamicVehicles.h">
       <Filter>DynamicVehicles</Filter>
     </ClInclude>
-    <ClInclude Include="Functions.h">
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\BootsAllTerrains.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\Camel.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\CamelSpeedWalker.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\Centaur.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\GraundVehicles.h">
+      <Filter>GraundVehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CMakeVehicles\Functions.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>

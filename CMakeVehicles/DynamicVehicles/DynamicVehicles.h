@@ -1,10 +1,15 @@
 #pragma once
 #include <iostream>
-#ifdef VehiclesLibraryDynamic_EXPORTS
+#ifdef VehiclesLibraryDynamic_EXPORTS 
 #define VEHICLESLIBRARY_API __declspec(dllexport)
-#else 
+#else
+#ifdef VEHICLESLIBRARYDYNAMIC_EXPORTS
+#define VEHICLESLIBRARY_API __declspec(dllexport)
+#else
 #define VEHICLESLIBRARY_API __declspec(dllimport)
 #endif
+#endif
+
 
 // Пространство имён динамической библиотеки транспортных средств
 namespace DynamicVehicles {

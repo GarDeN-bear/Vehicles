@@ -12,15 +12,18 @@ namespace DynamicVehicles {
 	}
 	float BootsAllTerrains::calculateTime() {
 		int timeWithoutRest = distance / velocity;
-		int timeWithRest = timeWithoutRest / timeBeforeRest;
+		int timeWithRest = round(timeWithoutRest / timeBeforeRest);
 		if (timeWithRest == 0) {
 			return timeWithoutRest;
 		}
 		else if (timeWithRest == 1) {
 			return timeWithoutRest + restPeriod_1;
 		}
-		else {
+		else if (timeWithRest % 2 == 0) {
 			return timeWithoutRest + restPeriod_1 + (timeWithRest - 1) * restPeriod_2;
+		}
+		else {
+			return timeWithoutRest + restPeriod_1 + (timeWithRest - 2) * restPeriod_2;
 		}
 	}
 

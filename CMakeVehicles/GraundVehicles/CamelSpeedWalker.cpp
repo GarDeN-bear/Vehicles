@@ -14,7 +14,7 @@ namespace DynamicVehicles {
 
 	float CamelSpeedWalker::calculateTime() {
 		float timeWithoutRest = distance / velocity;
-		float timeWithRest = timeWithoutRest / timeBeforeRest;
+		int timeWithRest = round(timeWithoutRest / timeBeforeRest);
 		if (timeWithRest == 0) {
 			return timeWithoutRest;
 		}
@@ -25,7 +25,7 @@ namespace DynamicVehicles {
 			return timeWithoutRest + restPeriod_1 + restPeriod_2;
 		}
 		else {
-			return timeWithoutRest + restPeriod_1 + (timeWithRest - 2) * restPeriod_3;
+			return timeWithoutRest + restPeriod_1 + restPeriod_2 + (timeWithRest - 2) * restPeriod_3;
 		}
 	}
 }

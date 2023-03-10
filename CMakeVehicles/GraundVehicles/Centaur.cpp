@@ -10,13 +10,13 @@ namespace DynamicVehicles {
 		resultTime = calculateTime();
 	}
 	float Centaur::calculateTime() {
-		float timeWithoutRest = distance / velocity;
-		float timeWithRest = timeWithoutRest / timeBeforeRest;
+		int timeWithoutRest = distance / velocity;
+		int timeWithRest = round(timeWithoutRest / timeBeforeRest);
 		if (timeWithRest == 0) {
 			return timeWithoutRest;
 		}
 		else {
-			return timeWithoutRest + timeWithRest * restPeriod_1;
+			return timeWithoutRest + (timeWithRest - 1) * restPeriod_1;
 		}
 
 	}

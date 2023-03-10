@@ -18,6 +18,32 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\AirVehicles.cpp" />
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\Broom.cpp" />
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\CarpetPlane.cpp" />
+    <ClCompile Include="..\CMakeVehicles\AirVehicles\Eagle.cpp" />
+    <ClCompile Include="..\CMakeVehicles\DynamicVehicles\DynamicVehicles.cpp" />
+    <ClCompile Include="..\CMakeVehicles\Functions.cpp" />
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\BootsAllTerrains.cpp" />
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\Camel.cpp" />
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\CamelSpeedWalker.cpp" />
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\Centaur.cpp" />
+    <ClCompile Include="..\CMakeVehicles\GraundVehicles\GraundVehicles.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\AirVehicles.h" />
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\Broom.h" />
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\CarpetPlane.h" />
+    <ClInclude Include="..\CMakeVehicles\AirVehicles\Eagle.h" />
+    <ClInclude Include="..\CMakeVehicles\DynamicVehicles\DynamicVehicles.h" />
+    <ClInclude Include="..\CMakeVehicles\Functions.h" />
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\BootsAllTerrains.h" />
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\Camel.h" />
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\CamelSpeedWalker.h" />
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\Centaur.h" />
+    <ClInclude Include="..\CMakeVehicles\GraundVehicles\GraundVehicles.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -76,7 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\CMakeVehicles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -92,7 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\CMakeVehicles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -108,7 +134,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\CMakeVehicles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,7 +150,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;VEHICLESLIBRARYDYNAMIC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\CMakeVehicles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -134,32 +160,6 @@
       <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="AirVehicles\AirVehicles.cpp" />
-    <ClCompile Include="AirVehicles\Broom.cpp" />
-    <ClCompile Include="AirVehicles\CarpetPlane.cpp" />
-    <ClCompile Include="AirVehicles\Eagle.cpp" />
-    <ClCompile Include="DynamicVehicles\DynamicVehicles.cpp" />
-    <ClCompile Include="Functions.cpp" />
-    <ClCompile Include="GraundVehicles\BootsAllTerrains.cpp" />
-    <ClCompile Include="GraundVehicles\Camel.cpp" />
-    <ClCompile Include="GraundVehicles\CamelSpeedWalker.cpp" />
-    <ClCompile Include="GraundVehicles\Centaur.cpp" />
-    <ClCompile Include="GraundVehicles\GraundVehicles.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AirVehicles\AirVehicles.h" />
-    <ClInclude Include="AirVehicles\Broom.h" />
-    <ClInclude Include="AirVehicles\CarpetPlane.h" />
-    <ClInclude Include="AirVehicles\Eagle.h" />
-    <ClInclude Include="DynamicVehicles\DynamicVehicles.h" />
-    <ClInclude Include="Functions.h" />
-    <ClInclude Include="GraundVehicles\BootsAllTerrains.h" />
-    <ClInclude Include="GraundVehicles\Camel.h" />
-    <ClInclude Include="GraundVehicles\CamelSpeedWalker.h" />
-    <ClInclude Include="GraundVehicles\Centaur.h" />
-    <ClInclude Include="GraundVehicles\GraundVehicles.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
